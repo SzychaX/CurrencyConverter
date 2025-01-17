@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Spinner for base currency -->
+    <!-- Spinner z waluty z ktorej przelicza -->
     <Spinner
         android:id="@+id/currencySpinnerBase"
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp" />
 
-    <!-- Spinner for target currency -->
+    <!-- Spinner dla waluty na ktora przelicza -->
     <Spinner
         android:id="@+id/currencySpinnerTarget"
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp" />
 
-    <!-- EditText for input amount -->
+    <!-- EditText dal danych wejsciowych -->
     <EditText
         android:id="@+id/amountEditText"
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"/>
 
-    <!-- Button to convert currency -->
+    <!-- Button do konwersji waluty -->
     <Button
         android:id="@+id/convertButton"
         android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true" />
 
-    <!-- TextView to display result -->
+    <!-- TextView do wyswietlania wyników -->
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true" />
 
-    <!-- Button to show map -->
+    <!-- Przycisk do pokazywania na mapie -->
     <Button
         android:id="@+id/mapButton"
         android:layout_width="wrap_content"

@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         convertButton.setOnClickListener(v -> convertCurrency());
         mapButton.setOnClickListener(v -> showCapitalOnMap());
 
-        // Initialize the map
+        // Inicjalizacja mapy
         MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.mapFragment);
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
 
 
-        // Initialize accelerometer
+        // Inicjalizacja akcelerometru
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         if (sensorManager != null) {
             accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -267,14 +267,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    private void showAllCurrencies() {
-        StringBuilder currenciesList = new StringBuilder("Waluty:\n");
-        for (Map.Entry<String, String> entry : currencyMap.entrySet()) {
-            currenciesList.append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
-        }
-
-        Toast.makeText(MainActivity.this, currenciesList.toString(), Toast.LENGTH_LONG).show();
-    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {

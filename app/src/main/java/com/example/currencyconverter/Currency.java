@@ -22,8 +22,4 @@ public class Currency {
     public String getCapital() {
         return capital;
     }
-
-    public double convertTo(double amount, Currency targetCurrency) {
-        return amount * (targetCurrency.getRate() / this.getRate());
-    }
 }

@@ -14,8 +14,6 @@ import java.util.Map;
 public class CurrencyListActivity extends AppCompatActivity {
 
     private ListView currencyListView;
-    private ArrayAdapter<String> adapter;
-    private List<String> currencyData = new ArrayList<>();
     private Map<String, String> currencyMap;
 
     @Override
@@ -27,13 +25,13 @@ public class CurrencyListActivity extends AppCompatActivity {
         currencyMap = (Map<String, String>) getIntent().getSerializableExtra("currencyMap");
 
         if (currencyMap != null) {
-            // Prepare list data
+            // Przygotowanie listy danych
             List<String> currencyData = new ArrayList<>();
             for (Map.Entry<String, String> entry : currencyMap.entrySet()) {
                 currencyData.add(entry.getKey() + ": " + entry.getValue() + " PLN");
             }
 
-            // Check if data is loaded properly
+            // Sprawdzenie czy dane wczytały się poprawnie
             Log.d("CurrencyListActivity", "Currency Map size: " + currencyMap.size());
 
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, currencyData);

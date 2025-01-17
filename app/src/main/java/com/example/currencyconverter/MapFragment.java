@@ -42,7 +42,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflatujemy widok fragmentu (layout XML)
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
 
         // Ustawiamy MapView
@@ -56,7 +55,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         // Ustawiamy listener dla przycisku
         showCapitalButton.setOnClickListener(v -> {
             // Zmienna waluty, dla której chcesz wyświetlić stolicę
-            String selectedCurrency = "USD"; // Możesz to dynamicznie zmieniać np. na podstawie wyboru użytkownika
+            String selectedCurrency = "USD";
             showCapitalOnMap(selectedCurrency);
         });
 
@@ -78,7 +77,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             mMap.moveCamera(com.google.android.gms.maps.CameraUpdateFactory.newLatLngZoom(capitalCoordinates, 10));
         } else {
             // Jeśli nie ma stolicy dla danej waluty
-            // Możesz dodać komunikat lub inne działanie
         }
     }
 
